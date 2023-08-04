@@ -1,0 +1,60 @@
+@import "colors.css";
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: monospace;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: @base;
+    color: @text;
+    border-radius: 12px;
+    border: 2px solid @maroon;
+}
+
+button {
+    color: @text;
+    border: 2px solid transparent;
+}
+
+button:hover,
+button:active,
+button:focus {
+    background-color: @base;
+    color: @text;
+    border-bottom-color: @text;
+}
+
+#clock,
+#battery,
+#cpu,
+#bluetooth,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+    padding: 4px;
+    border-radius: 8px;
+    background-color: @surface1;
+    margin: 4px;
+}
+
+#clock {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+#window { padding: 0 16px; font-size: 12px; }
+#workspaces button {
+    padding: 0 4px;
+}
+

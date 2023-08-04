@@ -1,0 +1,58 @@
+{
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "margin-top": 8,
+    "margin-left": 8,
+    "margin-right": 8,
+    "modules-left": ["hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["hyprland/workspaces", "cpu", "memory", "temperature", "battery", "wireplumber", "network", "bluetooth", "tray"],
+    "layer": "top",
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{:%e. %B %Y | %H:%M:%OS}",
+        "interval": 1    
+    },
+    "cpu": {
+        "format": "🧠 {usage}%"
+    },
+    "memory": {
+        "format": "🐏 {}%"
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "🌡️ {temperatureC}°C"
+    },
+    "battery": {
+        "format": "🔋 {capacity}%",
+        "format-charging": "⚡ {capacity}%",
+        "format-plugged": "🔌 {capacity}%",
+        "format-alt": "🔋 {time} {icon}"
+    },
+    "bluetooth": {
+        "format-on": "💙",
+        "format-off": "💙🚫",
+        "format-disabled": "💙🚫",
+        "on-click": "blueman-manager"
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        "format-wifi": "📡 ({signalStrength}%)",
+        "format-ethernet": "🌍",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected ⚠",
+        "on-click": "nm-connection-editor"
+    },
+    "wireplumber": {
+        "scroll-step": 5,
+        "format": "🔊 {volume}%",
+        "on-click": "pavucontrol"
+    }
+}
+
