@@ -13,37 +13,37 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%e. %B %Y | %H:%M:%OS}",
+        "format": "󰥔 {:%e. %B %Y | %H:%M:%OS}",
         "interval": 1    
     },
     "cpu": {
-        "format": "🧠 {usage}%"
+        "format": " {usage}%"
     },
     "memory": {
-        "format": "🐏 {}%"
+        "format": " {}%"
     },
     "temperature": {
         "critical-threshold": 80,
-        "format": "🌡️ {temperatureC}°C"
+        "format": " {temperatureC}°C"
     },
     "battery": {
-        "format": "🔋 {capacity}%",
-        "format-charging": "⚡ {capacity}%",
-        "format-plugged": "🔌 {capacity}%",
-        "format-alt": "🔋 {time} {icon}"
+        "format": "󰁹 {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "󱧥 {time} {icon}"
     },
     "bluetooth": {
-        "format-on": "💙",
-        "format-off": "💙🚫",
-        "format-disabled": "💙🚫",
+        "format-on": "󰂯",
+        "format-off": "󰂲",
+        "format-disabled": "󰂲",
         "on-click": "blueman-manager"
     },
     "battery#bat2": {
         "bat": "BAT2"
     },
     "network": {
-        "format-wifi": "📡 ({signalStrength}%)",
-        "format-ethernet": "🌍",
+        "format-wifi": " ({signalStrength}%)",
+        "format-ethernet": "󰈀",
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
@@ -51,7 +51,7 @@
     },
     "wireplumber": {
         "scroll-step": 5,
-        "format": "🔊 {volume}%",
+        "format": " {volume}%",
         "on-click": "pavucontrol"
     }
 }

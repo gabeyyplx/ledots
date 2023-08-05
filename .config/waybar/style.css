@@ -2,20 +2,23 @@
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: monospace;
-    font-size: 13px;
+    font-family: 'JetBrainsMono Nerd Font', monospace;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 window#waybar {
     background-color: @base;
     color: @text;
     border-radius: 12px;
-    border: 2px solid @maroon;
+    border: 2px solid @blue;
 }
 
 button {
     color: @text;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
+    padding: 2px;
+    margin: 0;
 }
 
 button:hover,
@@ -24,6 +27,7 @@ button:focus {
     background-color: @base;
     color: @text;
     border-bottom-color: @text;
+    padding: 0;
 }
 
 #clock,
@@ -42,14 +46,14 @@ button:focus {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-    padding: 4px;
+    padding: 4px 8px;
     border-radius: 8px;
     background-color: @surface1;
-    margin: 4px;
+    margin: 8px 4px;
 }
 
 #clock {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 15px;
 }
 
