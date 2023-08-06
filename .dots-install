@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# check if yay is installed
+if ! command -v yay &> /dev/null; then
+    echo "installing yay 🙌"
+    sudo pacman -S --needed base-devel git
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si
+    cd ..
+    rm -rf yay
+fi
+
+# check if package list exists
+package_list=".dots-package-list"
+if [ ! -f "$package_list" ]; then
+    echo "zomg no package list found 🤯"
+    exit 1
+fi
+
+# install le packages
+echo "installing from $package_list... 📦"
+yay -S --needed - < "$package_list"
+
+echo "all done 😎"
+
+#ty based chatgpt
