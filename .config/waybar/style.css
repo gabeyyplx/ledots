@@ -3,7 +3,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: 'JetBrainsMono Nerd Font', monospace;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
 }
 
@@ -12,6 +12,10 @@ window#waybar {
     color: @text;
     border-radius: 12px;
     border: 2px solid @blue;
+}
+
+.modules-left, .modules-center, .modules-right {
+    padding: 4px 8px;
 }
 
 button {
@@ -31,34 +35,50 @@ button:focus {
 }
 
 #clock,
+#gamemode,
 #battery,
 #cpu,
 #bluetooth,
 #memory,
 #disk,
 #temperature,
-#backlight,
 #network,
 #wireplumber,
-#custom-media,
 #tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#mpd {
-    padding: 4px 8px;
-    border-radius: 8px;
-    background-color: @surface1;
-    margin: 8px 4px;
+#custom-menu,
+#custom-power {
+    padding: 0 8px;
 }
 
-#clock {
-    font-weight: 500;
-    font-size: 15px;
+#cpu, #memory, #temperature {
+    color: @peach;
 }
 
-#window { padding: 0 16px; font-size: 12px; }
-#workspaces button {
+#window {
+    color: @text;
+}
+
+#battery {
+    color: @green;
+}
+
+#wireplumber {
+    color: @yellow;
+}
+
+#bluetooth,
+#custom-menu {
+    color: @blue;
+}
+
+
+#workspaces,
+#workspaces button,
+#workspaces button.active,
+#workspaces button.visible,
+#workspaces button.urgent,
+#workspaces button.persistent,
+#workspaces button.hidden {
     padding: 0 4px;
+    border: none;
 }
-

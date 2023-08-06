@@ -1,15 +1,47 @@
-hyprland
-mako
-git
-code
-firefox
-dolphin
-networkmanager
-hyprpaper
-waybar
-wofi
-pamixer
-pavucontrol
-nm-applet
-blueman
-bemoji-git
+ark 23.04.3-1
+bemoji-git r30.4209b90-1
+blueberry
+bluez 5.68-1
+bluez-utils 5.68-1
+catppuccin-gtk-theme-frappe 0.6.1-2
+cava 0.8.3-1
+cmatrix 2.0-2
+code 1.79.2-1
+discord 0.0.28-1
+dolphin 23.04.3-1
+firefox 116.0.1-1
+git 2.41.0-2
+gnome-keyring 1:42.1-3
+hyprland-git 0.28.0.r7.b925f1b4-1
+hyprpaper 0.3.0-1
+imagemagick 7.1.1.15-1
+kitty 0.29.2-1
+kvantum 1.0.10-1
+kvantum-theme-catppuccin-git r5.04be2ad-1
+lutris 0.5.13-5
+mako 1.8.0-1
+nano 7.2-1
+neofetch 7.1.0-2
+networkmanager 1.42.6-1
+nm-connection-editor 1.32.0-3
+noto-fonts-emoji 20220920-1
+nwg-bar-bin 0.1.3-1
+nwg-look-bin 0.2.4-1
+pamixer 1.6-2
+papirus-icon-theme 20230801-1
+pavucontrol 1:5.0+r64+geba9ca6-1
+pipes.sh 1.3.0-1
+polkit-kde-agent 5.27.7-1
+qt5ct 1.7-1
+sddm-git 0.20.0.9.g9e7791d-1
+sddm-sugar-dark 1.2-1
+swaylock 1.7.2-1
+ttf-jetbrains-mono-nerd 3.0.2-1
+waybar 0.9.20-2
+wev 1.0.0-12
+wofi 1.3-2
+xdg-desktop-portal-hyprland 0.4.0-1
+yadm 3.2.2-1
+yay 12.1.2-1
+zram-generator 1.1.2-1
+zsh 5.9-4
