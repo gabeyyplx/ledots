@@ -2,12 +2,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "margin-top": 8,
-    "margin-left": 8,
-    "margin-right": 8,
-    "modules-left": ["custom/menu", "cpu", "memory", "temperature", "hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["gamemode", "tray", "clock", "battery", "wireplumber", "bluetooth", "network", "custom/power"],
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["gamemode", "tray", "bluetooth", "cpu", "memory", "temperature", "battery", "wireplumber", "network"],
     "layer": "top",
     "tray": {
         "spacing": 10

@@ -20,7 +20,7 @@ fi
 
 # install le packages
 echo "installing from $package_list... 📦"
-yay -S --needed - < "$package_list"
+yay -S --needed $(<"$package_list")
 
 echo "all done 😎"
 
