@@ -1,5 +1,5 @@
 [General]
-TerminalApplication=kitty
+TerminalApplication=alacritty
 
 [KFileDialog Settings]
 Allow Expansion=false

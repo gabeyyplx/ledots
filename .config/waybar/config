@@ -5,7 +5,7 @@
     "margin-right": 4,
     "modules-left": ["cpu", "memory", "sway/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/media", "wireplumber", "battery", "bluetooth", "network", "tray"],
+    "modules-right": ["custom/media", "tray", "wireplumber", "battery", "bluetooth", "network", "tray"],
     "layer": "top",
     "tray": {
         "spacing": 8
