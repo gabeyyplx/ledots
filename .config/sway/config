@@ -1,40 +1,48 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
-
 set $mod mod4
 
+# Basics
+input * {
+    xkb_layout "de"
+    xkb_numlock enabled
+}
+set $primary_monitor DP-1
+set $secondary_monitor HDMI-A-1
+output HDMI-A-1 pos 0 0
+output HDMI-B-1 pos 0 0
+
+exec swayidle -w timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
+tiling_drag enable
+
+# Autostart
 exec waybar & mako
 exec /usr/lib/polkit-kde-authentication-agent-1
 exec /usr/lib/pam_kwallet_init
 exec autotiling
 
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output HDMI-A-1 pos 0 0
-output HDMI-B-1 pos 0 0
+# SwayFX
+blur enable
+shadows enable
+corner_radius 8
 
+# Style
+output * bg ~/Pictures/Papes/pape1.jpg fill
 gaps inner 8
+font UbuntuNerd 10
 
-exec swayidle -w timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
-tiling_drag enable
+client.focused #3c3836 #3c3836 #ebdbb2 #ebdbb2
+client.unfocused #1d2021 #1d2021 #ebdbb2 #ebdbb2
+client.focused_inactive #1d2021 #1d2021 #ebdbb2 #ebdbb2
+client.urgent #cc241d #1d2021 #ebdbb2 #ebdbb2
 
-input * {
-    xkb_layout "de"
-}
+# Binds
+    bindsym $mod+q exec alacritty
 
-
-    # Start a terminal
-    bindsym $mod+q exec kitty
-
-    # Kill focused window
     bindsym $mod+c kill
 
-    # Start your launcher
     bindsym $mod+return exec wofi --show drun -I
     bindsym $mod+w exec code
     bindsym $mod+f exec firefox
+    bindsym $mod+e exec dolphin
     bindsym $mod+period exec bemoji -t
 
     # Reload the configuration file
@@ -59,6 +67,17 @@ input * {
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
 
+    workspace 1 output $primary_monitor
+    workspace 2 output $primary_monitor
+    workspace 3 output $primary_monitor
+    workspace 4 output $primary_monitor
+    workspace 5 output $primary_monitor 
+    workspace 6 output $secondary_monitor
+    workspace 7 output $secondary_monitor
+    workspace 8 output $secondary_monitor
+    workspace 9 output $secondary_monitor
+    workspace 10 output $secondary_monitor
+
     bindsym $mod+Shift+1 move window to workspace number 1
     bindsym $mod+Shift+2 move window to workspace number 2
     bindsym $mod+Shift+3 move window to workspace number 3
@@ -70,14 +89,8 @@ input * {
     bindsym $mod+Shift+9 move window to workspace number 9
     bindsym $mod+Shift+0 move window to workspace number 10
 
-#
-# Layout stuff:
-#
-    # Switch the current container between different layout styles
-    bindsym $mod+j layout toggle split
 
-    # Make the current focus fullscreen
-    bindsym $mod+alt+return fullscreen
+    bindsym alt+return fullscreen
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+v floating toggle
@@ -87,48 +100,29 @@ input * {
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
-#
-# Scratchpad:
-#
-    # Sway has a "scratchpad", which is a bag of holding for windows.
-    # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
     bindsym $mod+Shift+minus move scratchpad
-
-    # Show the next scratchpad window or hide the focused scratchpad window.
-    # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
 
     # Media keys
-    bindsym XF86AudioRaiseVolume exec pamixer -u -i 5
-    bindsym XF86AudioLowerVolume exec, pamixer -u -d 5 
+    bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
+    bindsym XF86AudioLowerVolume exec wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-
     bindsym XF86AudioPlay exec playerctl play-pause
-    bindsym XF86AudioMute exec pamixer --toggle-mute
+    bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
     # Brightness
     bindsym XF86MonBrightnessUp exec brightnessctl set +10%
     bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
+# PTT
+set $ptt_key 277
+bindcode --whole-window $ptt_key exec xdotool mousedown 10
+bindcode  --release --whole-window $ptt_key exec xdotool mouseup 10
 
-mode "resize" {
-    # Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
-
-    # Return to default mode
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym $mod+r mode "resize"
-
-set $ptt_key_example shift+0x273
-bindsym $ptt_key_example exec xdotool key --window $(xdotool search --name "discord") "$ptt_key_example"
-
-font UbuntuNerd 11
-
+# Window r00lz
+for_window [class="^league|^League"] move to output $primary_monitor
+for_window [class="discord"] move to output $secondary_monitor
 
 include /etc/sway/config.d/*
 

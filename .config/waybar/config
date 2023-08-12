@@ -1,16 +1,14 @@
 {
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
-    "margin-top": 8,
-    "margin-left": 8,
-    "margin-right": 8,
-    "modules-left": ["sway/workspaces", "wlr/taskbar"],
+    "spacing": 8,
+    "margin-top": 4,
+    "margin-left": 4,
+    "margin-right": 4,
+    "modules-left": ["cpu", "memory", "sway/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["gamemode", "tray", "bluetooth", "cpu", "memory", "temperature", "battery", "wireplumber", "network"],
+    "modules-right": ["custom/media", "wireplumber", "battery", "bluetooth", "network", "tray"],
     "layer": "top",
     "tray": {
-        "spacing": 10
+        "spacing": 8
     },
     "clock": {
         "format": "{:%H:%M:%OS}",
@@ -19,14 +17,11 @@
         "interval": 1    
     },
     "cpu": {
-        "format": " {usage}%"
+        "format": "  {usage}%",
+        "tooltip-format": "Load: {load}"
     },
     "memory": {
-        "format": " {}%"
-    },
-    "temperature": {
-        "critical-threshold": 80,
-        "format": " {temperatureC}°C"
+        "format": "  {}%"
     },
     "battery": {
         "format": "󰁹 {capacity}%",
@@ -63,13 +58,6 @@
         "format": "󰣇",
         "on-click": "wofi --show drun -I"
     },
-    "sway/workspaces": {
-        "format": "{index}",
-        "format-icons": {
-            "active": "󰺕",
-            "default": "󰝦"
-        }
-    },
     "gamemode": {
         "format": "",
         "format-alt": "",
@@ -77,6 +65,14 @@
         "use-icon": false,
         "tooltip": true,
         "tooltip-format": "Games running: {count}"
+    },
+    "custom/media": {
+        "exec": "playerctl metadata --format \"{{ title }} - {{ artist }}\"",
+        "format": "{}",
+        "interval": 1
+    },
+    "sway/workspaces": {
+        "format": "{name}"
     }
 }
 

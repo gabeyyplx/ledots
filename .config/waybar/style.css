@@ -1,7 +1,6 @@
 @import "colors.css";
 
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: 'Ubuntu Nerd Font', monospace;
     font-size: 16px;
     font-weight: 400;
@@ -14,23 +13,7 @@ window#waybar {
 }
 
 .modules-left, .modules-center, .modules-right {
-    padding: 4px 8px;
-}
-
-button {
-    color: @text;
-    border: 1px solid transparent;
-    padding: 2px;
-    margin: 0;
-}
-
-button:hover,
-button:active,
-button:focus {
-    background-color: @base;
-    color: @text;
-    border-bottom-color: @text;
-    padding: 0;
+    padding: 4px 16px;
 }
 
 #clock,
@@ -44,13 +27,12 @@ button:focus {
 #network,
 #wireplumber,
 #tray,
-#custom-menu,
-#custom-power {
-    padding: 0 8px;
+#workspaces {
+    padding: 0 1px;
 }
 
 #cpu, #memory, #temperature {
-    color: @peach;
+    color: @aqua;
 }
 
 #window {
@@ -70,21 +52,14 @@ button:focus {
     color: @blue;
 }
 
-
-#workspaces,
 #workspaces button,
-#workspaces button.active,
 #workspaces button.visible,
+#workspaces button.focused,
 #workspaces button.urgent,
 #workspaces button.persistent,
-#workspaces button.hidden,
-#taskbar,
-#taskbar button,
-#taskbar button.active,
-#taskbar button.visible,
-#taskbar button.urgent,
-#taskbar button.persistent,
-#taskbar button.hidden {
-    padding: 0 2px;
+#workspaces button.current_output {
+    margin: 0 4px 0 0;
+    padding: 1px;
     border: none;
+    background-color: transparent;
 }
