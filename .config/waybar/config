@@ -2,7 +2,10 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces"],
+    "margin-top": 8,
+    "margin-left": 8,
+    "margin-right": 8,
+    "modules-left": ["workspaces", "window"],
     "modules-center": ["clock"],
     "modules-right": ["gamemode", "tray", "bluetooth", "cpu", "memory", "temperature", "battery", "wireplumber", "network"],
     "layer": "top",
@@ -10,7 +13,8 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%a, %d.%m.%Y | %H:%M:%OS}",
+        "format": "{:%H:%M:%OS}",
+        "tooltip-format": "{:%a, %d.%m.%Y}",
         "locale": "de_DE.UTF-8",
         "interval": 1    
     },
@@ -36,7 +40,7 @@
         "format-on": "󰂯 on",
         "format-off": "󰂲 off",
         "format-disabled": "󰂲 off",
-        "on-click": "blueberry"
+        "on-click": "blueman"
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -63,14 +67,14 @@
         "format": "⏻",
         "on-click": "nwg-bar"
     },
-    "hyprland/workspaces": {
+    "workspaces": {
         "format": "{icon}",
         "format-icons": {
             "active": "󰺕",
             "default": "󰝦"
         }
     },
-    "hyprland/window": {
+    "window": {
         "format": "{title}",
         "separate-outputs": true,
         "max-length": 30
