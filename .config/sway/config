@@ -9,48 +9,22 @@ set $mod mod4
 exec waybar & mako
 exec /usr/lib/polkit-kde-authentication-agent-1
 exec /usr/lib/pam_kwallet_init
-
+exec autotiling
 
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 output HDMI-A-1 pos 0 0
 output HDMI-B-1 pos 0 0
 
+gaps inner 8
 
-### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-
-### Input configuration
-#
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
+exec swayidle -w timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
+tiling_drag enable
 
 input * {
     xkb_layout "de"
 }
 
-### Key bindings
-#
-# Basics:
-#
+
     # Start a terminal
     bindsym $mod+q exec kitty
 
@@ -61,30 +35,19 @@ input * {
     bindsym $mod+return exec wofi --show drun -I
     bindsym $mod+w exec code
     bindsym $mod+f exec firefox
-
-    # Drag floating windows by holding down $mod and left mouse button.
-    # Resize them with right mouse button + $mod.
-    # Despite the name, also works for non-floating windows.
-    # Change normal to inverse to use left mouse button for resizing and right
-    # mouse button for dragging.
-    #floating_modifier $mod normal
+    bindsym $mod+period exec bemoji -t
 
     # Reload the configuration file
     bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-#
-# Moving around:
-#
+
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
-#
-# Workspaces:
-#
-    # Switch to workspace
+
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
     bindsym $mod+3 workspace number 3
@@ -95,19 +58,18 @@ input * {
     bindsym $mod+8 workspace number 8
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
-    # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace number 1
-    bindsym $mod+Shift+2 move container to workspace number 2
-    bindsym $mod+Shift+3 move container to workspace number 3
-    bindsym $mod+Shift+4 move container to workspace number 4
-    bindsym $mod+Shift+5 move container to workspace number 5
-    bindsym $mod+Shift+6 move container to workspace number 6
-    bindsym $mod+Shift+7 move container to workspace number 7
-    bindsym $mod+Shift+8 move container to workspace number 8
-    bindsym $mod+Shift+9 move container to workspace number 9
-    bindsym $mod+Shift+0 move container to workspace number 10
-    # Note: workspaces can have any name you want, not just numbers.
-    # We just use 1-10 as the default.
+
+    bindsym $mod+Shift+1 move window to workspace number 1
+    bindsym $mod+Shift+2 move window to workspace number 2
+    bindsym $mod+Shift+3 move window to workspace number 3
+    bindsym $mod+Shift+4 move window to workspace number 4
+    bindsym $mod+Shift+5 move window to workspace number 5
+    bindsym $mod+Shift+6 move window to workspace number 6
+    bindsym $mod+Shift+7 move window to workspace number 7
+    bindsym $mod+Shift+8 move window to workspace number 8
+    bindsym $mod+Shift+9 move window to workspace number 9
+    bindsym $mod+Shift+0 move window to workspace number 10
+
 #
 # Layout stuff:
 #
@@ -137,9 +99,18 @@ input * {
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
-#
-# Resizing containers:
-#
+
+    # Media keys
+    bindsym XF86AudioRaiseVolume exec pamixer -u -i 5
+    bindsym XF86AudioLowerVolume exec, pamixer -u -d 5 
+    bindsym XF86AudioPlay exec playerctl play-pause
+    bindsym XF86AudioMute exec pamixer --toggle-mute
+
+    # Brightness
+    bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+    bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+
+
 mode "resize" {
     # Ditto, with arrow keys
     bindsym Left resize shrink width 10px
@@ -153,4 +124,11 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+set $ptt_key_example shift+0x273
+bindsym $ptt_key_example exec xdotool key --window $(xdotool search --name "discord") "$ptt_key_example"
+
+font UbuntuNerd 11
+
+
 include /etc/sway/config.d/*
+

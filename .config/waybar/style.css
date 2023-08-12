@@ -77,7 +77,14 @@ button:focus {
 #workspaces button.visible,
 #workspaces button.urgent,
 #workspaces button.persistent,
-#workspaces button.hidden {
-    padding: 0 4px;
+#workspaces button.hidden,
+#taskbar,
+#taskbar button,
+#taskbar button.active,
+#taskbar button.visible,
+#taskbar button.urgent,
+#taskbar button.persistent,
+#taskbar button.hidden {
+    padding: 0 2px;
     border: none;
 }

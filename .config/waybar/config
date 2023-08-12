@@ -5,7 +5,7 @@
     "margin-top": 8,
     "margin-left": 8,
     "margin-right": 8,
-    "modules-left": ["workspaces", "window"],
+    "modules-left": ["sway/workspaces", "wlr/taskbar"],
     "modules-center": ["clock"],
     "modules-right": ["gamemode", "tray", "bluetooth", "cpu", "memory", "temperature", "battery", "wireplumber", "network"],
     "layer": "top",
@@ -63,21 +63,12 @@
         "format": "󰣇",
         "on-click": "wofi --show drun -I"
     },
-    "custom/power": {
-        "format": "⏻",
-        "on-click": "nwg-bar"
-    },
-    "workspaces": {
-        "format": "{icon}",
+    "sway/workspaces": {
+        "format": "{index}",
         "format-icons": {
             "active": "󰺕",
             "default": "󰝦"
         }
-    },
-    "window": {
-        "format": "{title}",
-        "separate-outputs": true,
-        "max-length": 30
     },
     "gamemode": {
         "format": "",
