@@ -121,6 +121,7 @@ bindcode  --release --whole-window $ptt_key exec xdotool mouseup 10
 # Window r00lz
 for_window [class="^league|^League"] move to output $primary_monitor
 for_window [class="discord"] move to output $secondary_monitor
+for_window [shell=".*"] inhibit_idle fullscreen 
 
 include /etc/sway/config.d/*
 

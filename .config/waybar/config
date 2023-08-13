@@ -8,7 +8,7 @@
     "modules-right": ["tray", "cpu", "memory", "wireplumber", "battery", "bluetooth", "network"],
     "layer": "top",
     "tray": {
-        "spacing": 8
+        "spacing": 4
     },
     "clock": {
         "format": "{:%H:%M:%OS}",
@@ -52,6 +52,7 @@
     "wireplumber": {
         "scroll-step": 5,
         "format": " {volume}%",
+        "format-muted": "󰝟 --",
         "on-click": "pavucontrol"
     },
     "custom/menu": {
