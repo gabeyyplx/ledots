@@ -40,6 +40,7 @@ client.urgent #cc241d #1d2021 #ebdbb2 #ebdbb2
     bindsym $mod+c kill
 
     bindsym $mod+return exec wofi --show drun -I
+    bindsym $mod+space exec wofi --show drun -I
     bindsym $mod+w exec code
     bindsym $mod+f exec firefox
     bindsym $mod+e exec dolphin
@@ -94,9 +95,6 @@ client.urgent #cc241d #1d2021 #ebdbb2 #ebdbb2
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+v floating toggle
-
-    # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent

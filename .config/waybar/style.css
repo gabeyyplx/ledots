@@ -2,18 +2,19 @@
 
 * {
     font-family: 'Ubuntu Nerd Font', monospace;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
 }
 
 window#waybar {
-    background-color: @base;
+    background-color: transparent;
     color: @text;
-    border-radius: 10px;
 }
 
 .modules-left, .modules-center, .modules-right {
     padding: 4px 16px;
+    border-radius: 8px;
+    background-color: @base;
 }
 
 #clock,
@@ -28,38 +29,22 @@ window#waybar {
 #wireplumber,
 #tray,
 #workspaces {
-    padding: 0 1px;
+    padding: 0 2px;
 }
 
-#cpu, #memory, #temperature {
-    color: @aqua;
+#workspaces button {
+    margin: 0 2px 0 0;
+    padding: 0 4px;
+    border: 2px solid transparent;
+    border-radius: 0;
+    min-width: 0;
 }
 
-#window {
-    color: @text;
+#workspaces button.focused {
+    border-bottom-color: @text;
 }
 
-#battery {
-    color: @green;
+#workspaces button.urgent {
+    border-bottom-color: @red;
 }
 
-#wireplumber {
-    color: @yellow;
-}
-
-#bluetooth,
-#custom-menu {
-    color: @blue;
-}
-
-#workspaces button,
-#workspaces button.visible,
-#workspaces button.focused,
-#workspaces button.urgent,
-#workspaces button.persistent,
-#workspaces button.current_output {
-    margin: 0 4px 0 0;
-    padding: 1px;
-    border: none;
-    background-color: transparent;
-}
