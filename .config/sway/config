@@ -46,6 +46,7 @@ client.urgent #cc241d #1d2021 #ebdbb2 #ebdbb2
     bindsym $mod+f exec firefox
     bindsym $mod+e exec dolphin
     bindsym $mod+period exec bemoji -t
+    bindsym $mod+l exec nwg-bar
 
     # Reload the configuration file
     bindsym $mod+Shift+r reload
