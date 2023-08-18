@@ -1,18 +1,14 @@
 {
-    "spacing": 8,
-    "margin-top": 8,
-    "margin-left": 8,
-    "margin-right": 8,
-    "modules-left": ["sway/workspaces", "custom/media"],
+    "spacing": 0,
+    "modules-left": ["cpu", "memory", "sway/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "cpu", "memory", "wireplumber", "battery", "bluetooth", "network"],
+    "modules-right": ["tray", "custom/media","battery", "bluetooth", "network", "wireplumber"],
     "layer": "top",
     "tray": {
-        "spacing": 4
+        "spacing": 8
     },
     "clock": {
-        "format": "{:%H:%M:%OS}",
-        "tooltip-format": "{:%a, %d.%m.%Y}",
+        "format": "{:%a, %d.%m.%Y | %H:%M:%OS}",
         "locale": "de_DE.UTF-8",
         "interval": 1    
     },
@@ -51,7 +47,7 @@
     },
     "wireplumber": {
         "scroll-step": 5,
-        "format": " {volume}%",
+        "format": "  {volume}%",
         "format-muted": "󰝟 --",
         "on-click": "pavucontrol"
     },

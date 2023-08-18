@@ -4,6 +4,7 @@ set $mod mod4
 input * {
     xkb_layout "de"
     xkb_numlock enabled
+    
 }
 set $primary_monitor DP-1
 set $secondary_monitor HDMI-A-1
