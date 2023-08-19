@@ -26,13 +26,23 @@ window#waybar {
     margin: 0;
 }
 
-#cpu, #memory {
-    background-color: @orange; 
+#cpu, #memory, #temperature {
+    background-color: @red; 
     color: @background;
+}
+
+#memory {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 #clock {
     background-color: @aqua;
+    color: @background;
+}
+
+#battery {
+    background-color: @green;
     color: @background;
 }
 
