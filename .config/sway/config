@@ -27,6 +27,7 @@ corner_radius 8
 
 # Style
 output * bg ~/Pictures/Papes/pape1.jpg fill
+gaps outer 8
 gaps inner 8
 font UbuntuNerd 10
 

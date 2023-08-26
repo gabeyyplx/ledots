@@ -4,9 +4,9 @@
     "modules-center": ["clock"],
     "modules-right": ["tray", "custom/media","battery", "bluetooth", "network", "wireplumber"],
     "layer": "top",
-    "margin-top": 4,
-    "margin-left": 4,
-    "margin-right": 4,
+    "margin-top": 8,
+    "margin-left": 8,
+    "margin-right": 8,
     "tray": {
         "spacing": 8
     },
