@@ -30,10 +30,10 @@ output * bg ~/Pictures/Papes/pape1.jpg fill
 gaps inner 8
 font UbuntuNerd 10
 
-client.focused #3c3836 #3c3836 #ebdbb2 #ebdbb2
-client.unfocused #1d2021 #1d2021 #ebdbb2 #ebdbb2
-client.focused_inactive #1d2021 #1d2021 #ebdbb2 #ebdbb2
-client.urgent #cc241d #1d2021 #ebdbb2 #ebdbb2
+client.focused #8caaee #8caaee #303446 #303446
+client.unfocused #303446 #303446 #c6d0f5 #c6d0f5
+client.focused_inactive #303446 #303446 #c6d0f5 #c6d0f5
+client.urgent #e78284 #e78284 #c6d0f5 #c6d0f5
 
 # Binds
     bindsym $mod+q exec alacritty
