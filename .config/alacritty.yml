@@ -26,65 +26,7 @@ colors:
         footer_bar:
             foreground: "#303446" # base
             background: "#A5ADCE" # subtext0
-# Colors (Gruvbox dark)
-colors:
-  # Default colors
-  primary:
-    # hard contrast: background = '#1d2021'
-    background: '#282828'
-    # soft contrast: background = '#32302f'
-    foreground: '#ebdbb2'
 
-  # Normal colors
-  normal:
-    black:   '#282828'# Colors (Gruvbox dark)
-colors:
-  # Default colors
-  primary:
-    # hard contrast: background = '#1d2021'
-    background: '#282828'
-    # soft contrast: background = '#32302f'
-    foreground: '#ebdbb2'
-
-  # Normal colors
-  normal:
-    black:   '#282828'
-    red:     '#cc241d'
-    green:   '#98971a'
-    yellow:  '#d79921'
-    blue:    '#458588'
-    magenta: '#b16286'
-    cyan:    '#689d6a'
-    white:   '#a89984'
-
-  # Bright colors
-  bright:
-    black:   '#928374'
-    red:     '#fb4934'
-    green:   '#b8bb26'
-    yellow:  '#fabd2f'
-    blue:    '#83a598'
-    magenta: '#d3869b'
-    cyan:    '#8ec07c'
-    white:   '#ebdbb2'
-    red:     '#cc241d'
-    green:   '#98971a'
-    yellow:  '#d79921'
-    blue:    '#458588'
-    magenta: '#b16286'
-    cyan:    '#689d6a'
-    white:   '#a89984'
-
-  # Bright colors
-  bright:
-    black:   '#928374'
-    red:     '#fb4934'
-    green:   '#b8bb26'
-    yellow:  '#fabd2f'
-    blue:    '#83a598'
-    magenta: '#d3869b'
-    cyan:    '#8ec07c'
-    white:   '#ebdbb2'
     # Keyboard regex hints
     hints:
         start:
@@ -135,7 +77,6 @@ colors:
     indexed_colors:
         - { index: 16, color: "#EF9F76" }
         - { index: 17, color: "#F2D5CF" }
-
 
 window:
   padding:
