@@ -2,13 +2,14 @@
 
 * {
     font-family: 'Ubuntu Nerd Font', monospace;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
 }
 
 window#waybar {
     background-color: @background;
     color: @text;
+    border-radius: 8px;
 }
 
 #clock,
@@ -27,8 +28,7 @@ window#waybar {
 }
 
 #cpu, #memory, #temperature {
-    background-color: @red; 
-    color: @background;
+    color: @red; 
 }
 
 #memory {
@@ -37,32 +37,27 @@ window#waybar {
 }
 
 #clock {
-    background-color: @aqua;
-    color: @background;
+    color: @aqua;
 }
 
 #battery {
-    background-color: @green;
-    color: @background;
+    color: @green;
 }
 
 #bluetooth {
-    background-color: @blue;
-    color: @background;
+    color: @blue;
 }
 
 #wireplumber {
-    background-color: @yellow;
-    color: @background;
+    color: @yellow;
 }
 
 #network {
-    background-color: @purple;
-    color: @background;
+    color: @purple;
 }
 
 #custom-media {
-    background-color: @text;
+    color: @text;
     color: @background;
 }
 
