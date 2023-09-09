@@ -41,7 +41,7 @@ client.focused_inactive #303446 #303446 #c6d0f5 #c6d0f5
 client.urgent #e78284 #e78284 #c6d0f5 #c6d0f5
 
 # Binds
-    bindsym $mod+q exec alacritty
+    bindsym $mod+q exec foot
     bindsym $mod+c kill
     bindsym $mod+return exec wofi --show drun -I
     bindsym $mod+space exec wofi --show drun -I
@@ -49,7 +49,8 @@ client.urgent #e78284 #e78284 #c6d0f5 #c6d0f5
     bindsym $mod+f exec firefox
     bindsym $mod+e exec dolphin
     bindsym $mod+period exec bemoji -t
-    bindsym $mod+l exec nwg-bar
+    bindsym $mod+l exec swaylock
+    bindsym $mod+escape exec nwg-bar
 
     # Reload the configuration file
     bindsym $mod+Shift+r reload
