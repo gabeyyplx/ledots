@@ -11,7 +11,8 @@ set $secondary_monitor HDMI-A-1
 output HDMI-A-1 pos 0 0
 output HDMI-B-1 pos 0 0
 
-exec swayidle -w timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
+exec swayidle -w timeout 300 'swaylock'
+exec swayidle -w timeout 360 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 tiling_drag enable
 
 # Autostart
