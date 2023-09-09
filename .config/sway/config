@@ -20,6 +20,7 @@ exec waybar & mako
 exec /usr/lib/polkit-kde-authentication-agent-1
 exec /usr/lib/pam_kwallet_init
 exec autotiling
+exec wl-paste ---watch cliphist store
 
 # SwayFX
 blur enable
@@ -52,7 +53,10 @@ client.urgent #e78284 #e78284 #c6d0f5 #c6d0f5
     bindsym $mod+period exec bemoji -t
     bindsym $mod+l exec swaylock
     bindsym $mod+escape exec nwg-bar
-
+    bindsym $mod+h exec cliphist list | wofi --dmenu | cliphist decode | wl-copy
+    bindsym Print exec grim - | wl-copy
+    bindsym $mod+Print exec grim -g"$(slurp)" - | wl-copy
+    
     # Reload the configuration file
     bindsym $mod+Shift+r reload
 
