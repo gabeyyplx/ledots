@@ -68,7 +68,8 @@ window#waybar {
     min-width: 0;
 }
 
-#workspaces button.focused {
+#workspaces button.focused,
+#workspaces button.active {
     background-color: @text;
     color: @background;
 }

@@ -1,6 +1,6 @@
 {
     "spacing": 0,
-    "modules-left": ["cpu", "memory", "temperature", "sway/workspaces"],
+    "modules-left": ["cpu", "memory", "temperature", "hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["tray", "custom/media","battery", "bluetooth", "network", "wireplumber"],
     "layer": "top",
@@ -77,6 +77,9 @@
         "on-click": "playerctl play-pause"
     },
     "sway/workspaces": {
+        "format": "{name}"
+    },
+    "hyprland/workspaces": {
         "format": "{name}"
     }
 }
