@@ -2,7 +2,7 @@
     "spacing": 0,
     "modules-left": ["cpu", "memory", "temperature", "hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "custom/media","battery", "bluetooth", "network", "wireplumber"],
+    "modules-right": ["tray", "custom/media","battery", "wireplumber"],
     "layer": "top",
     "margin-top": 8,
     "margin-left": 8,
