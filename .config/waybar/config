@@ -1,8 +1,8 @@
 {
     "spacing": 0,
-    "modules-left": ["cpu", "memory", "temperature", "sway/workspaces"],
+    "modules-left": ["cpu", "memory", "temperature", "hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "custom/media","battery", "bluetooth", "network", "wireplumber"],
+    "modules-right": ["tray", "custom/media","battery", "pulseaudio"],
     "layer": "top",
     "margin-top": 8,
     "margin-left": 8,
@@ -52,7 +52,7 @@
         "format-disconnected": "Disconnected ⚠",
         "on-click": "nm-connection-editor"
     },
-    "wireplumber": {
+    "pulseaudio": {
         "scroll-step": 5,
         "format": " {volume}%",
         "format-muted": "󰝟 --",
@@ -77,6 +77,9 @@
         "on-click": "playerctl play-pause"
     },
     "sway/workspaces": {
+        "format": "{name}"
+    },
+    "hyprland/workspaces": {
         "format": "{name}"
     }
 }
