@@ -4,9 +4,6 @@
     "modules-center": ["clock"],
     "modules-right": ["tray", "custom/media","battery", "pulseaudio"],
     "layer": "top",
-    "margin-top": 8,
-    "margin-left": 8,
-    "margin-right": 8,
     "tray": {
         "spacing": 8
     },
@@ -31,14 +28,6 @@
         "format-charging": "󰂄 {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "󱧥 {time}"
-    },
-    "bluetooth": {
-        "format": "󰂯",
-        "format-connected": "󰂯 {num_connections}",
-        "format-on": "󰂯",
-        "format-off": "󰂲",
-        "format-disabled": "󰂲",
-        "on-click": "blueman-manager"
     },
     "battery#bat2": {
         "bat": "BAT2"

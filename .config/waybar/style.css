@@ -9,7 +9,6 @@
 window#waybar {
     background-color: @background;
     color: @text;
-    border-radius: 8px;
 }
 
 #clock,
