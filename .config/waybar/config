@@ -2,7 +2,7 @@
     "spacing": 0,
     "modules-left": ["cpu", "memory", "temperature", "hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "custom/media","battery", "pulseaudio"],
+    "modules-right": ["tray", "custom/media","battery", "wireplumber"],
     "layer": "top",
     "tray": {
         "spacing": 8
@@ -13,7 +13,6 @@
     },
     "clock": {
         "format": "{:%a, %d.%m.%Y | %H:%M:%OS}",
-        "locale": "de_DE.UTF-8",
         "interval": 1    
     },
     "cpu": {
@@ -41,7 +40,7 @@
         "format-disconnected": "Disconnected ⚠",
         "on-click": "nm-connection-editor"
     },
-    "pulseaudio": {
+    "wireplumber": {
         "scroll-step": 5,
         "format": " {volume}%",
         "format-muted": "󰝟 --",

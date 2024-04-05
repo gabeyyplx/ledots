@@ -22,9 +22,8 @@ grimblast-git
 gruvbox-material-gtk-theme-git
 gruvbox-material-icon-theme-git
 gst-plugin-pipewire
-hyprland
-hyprpaper
-hyprpicker
+hyprland-git
+hyprpaper-git
 imagemagick
 kde-cli-tools
 krita
@@ -73,7 +72,7 @@ wireplumber
 wofi
 wtype
 xdg-desktop-portal-hyprland
-xwaylandvideobridge-git
+xwaylandvideobridge
 yadm
 zram-generator
 zsh
