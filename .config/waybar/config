@@ -2,7 +2,8 @@
     "spacing": 0,
     "modules-left": ["cpu", "memory", "temperature", "hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "custom/media","battery", "wireplumber"],
+    "modules-right": ["custom/media", "tray" ,"battery", "wireplumber"],
+    "margin": "8 8 0 8",
     "layer": "top",
     "tray": {
         "spacing": 8
@@ -42,7 +43,7 @@
     },
     "wireplumber": {
         "scroll-step": 5,
-        "format": " {volume}%",
+        "format": "  {volume}%",
         "format-muted": "󰝟 --",
         "on-click": "pavucontrol"
     },
